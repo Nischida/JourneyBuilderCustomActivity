@@ -37,6 +37,7 @@
 		}
 	},
 	"configurationArguments": {
+		"applicationExtensionKey": "723d8cc5-d916-46af-bd38-beaba78ad0ff",
 		"save": {
 			"url": "https://https://sms-transacional.herokuapp.com/journeybuilder/save"
 		},
