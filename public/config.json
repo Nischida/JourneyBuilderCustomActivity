@@ -22,60 +22,88 @@
 		"execute": {
 			"inArguments": [
 				{
-					"emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}"
+					"emailAddress": "{{InteractionDefaults.Email}}"
+				},
+				{
+					"phoneNumber": "{{Contact.Default.PhoneNumber}}"
 				}
 			],
-			"outArguments": [],
-			"url": "https://https://sms-transacional.herokuapp.com/journeybuilder/execute",
-			"verb": "POST",
-			"body": "",
-			"header": "",
-			"format": "json",
-			"useJwt": true,
-			"timeout": 10000
+			"outArguments": [
+				{
+					"foundSignupDate": ""
+				}
+			],
+			"url": "https://https://sms-transacional.herokuapp.com/journeybuilder/execute"
 		}
 	},
 	"configurationArguments": {
-		"applicationExtensionKey": "723d8cc5-d916-46af-bd38-beaba78ad0ff",
 		"save": {
-			"url": "https://sms-transacional.herokuapp.com/journeybuilder/save",
-			"verb": "POST",
-			"useJwt": true
+			"url": "https://https://sms-transacional.herokuapp.com/journeybuilder/save"
 		},
 		"publish": {
-			"url": "https://sms-transacional.herokuapp.com/journeybuilder/publish",
-			"verb": "POST",
-			"useJwt": true
-		},
-		"stop": {
-			"url": "https://sms-transacional.herokuapp.com/journeybuilder/stop",
-			"verb": "POST",
-			"useJwt": true
+			"url": "https://https://sms-transacional.herokuapp.com/journeybuilder/publish"
 		},
 		"validate": {
-			"url": "https://sms-transacional.herokuapp.com/journeybuilder/validate",
-			"verb": "POST",
-			"useJwt": true
+			"url": "https://https://sms-transacional.herokuapp.com/journeybuilder/validate"
+		},
+		"stop": {
+			"url": "https://https://sms-transacional.herokuapp.com/journeybuilder/stop"
 		}
 	},
 	"wizardSteps": [
 		{
-			"label": "Configure Activity",
+			"label": "Step 1",
 			"key": "step1"
+		},
+		{
+			"label": "Step 2",
+			"key": "step2"
+		},
+		{
+			"label": "Step 3",
+			"key": "step3"
+		},
+		{
+			"label": "Step 4",
+			"key": "step4",
+			"active": false
 		}
 	],
 	"userInterfaces": {
 		"configModal": {
-			"height": 400,
-			"width": 1000,
-			"fullscreen": false
+			"height": 200,
+			"width": 300,
+			"fullscreen": true
 		}
 	},
 	"schema": {
 		"arguments": {
 			"execute": {
-				"inArguments": [],
-				"outArguments": []
+				"inArguments": [
+					{
+						"phoneNumber": {
+							"dataType": "Phone",
+							"isNullable": false,
+							"direction": "in"
+						}
+					},
+					{
+						"emailAddress": {
+							"dataType": "Email",
+							"isNullable": false,
+							"direction": "in"
+						}
+					}
+				],
+				"outArguments": [
+					{
+						"foundSignupDate": {
+							"dataType": "Date",
+							"direction": "out",
+							"access": "visible"
+						}
+					}
+				]
 			}
 		}
 	}
