@@ -8,12 +8,12 @@
 	"type": "REST",
 	"lang": {
 		"en-US": {
-			"name": "Template",
+			"name": "Custom Activity",
 			"description": "A Template for a custom Journey Builder activity",
 			"step1Label": "Configure Activity"
 		},
 		"pt-BR": {
-			"name": "Template",
+			"name": "Custom Activity",
 			"description": "A Template for a custom Journey Builder activity",
 			"step1Label": "Configure Activity"
 		}
