@@ -33,22 +33,22 @@
 					"foundSignupDate": ""
 				}
 			],
-			"url": "https://https://sms-transacional.herokuapp.com/execute"
+			"url": "https://sms-transacional.herokuapp.com/execute"
 		}
 	},
 	"configurationArguments": {
 		"applicationExtensionKey": "723d8cc5-d916-46af-bd38-beaba78ad0ff",
 		"save": {
-			"url": "https://https://sms-transacional.herokuapp.com/save"
+			"url": "https://sms-transacional.herokuapp.com/save"
 		},
 		"publish": {
-			"url": "https://https://sms-transacional.herokuapp.com/publish"
+			"url": "https://sms-transacional.herokuapp.com/publish"
 		},
 		"validate": {
-			"url": "https://https://sms-transacional.herokuapp.com/validate"
+			"url": "https://sms-transacional.herokuapp.com/validate"
 		},
 		"stop": {
-			"url": "https://https://sms-transacional.herokuapp.com/stop"
+			"url": "https://sms-transacional.herokuapp.com/stop"
 		}
 	},
 	"wizardSteps": [
